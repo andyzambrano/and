@@ -1,0 +1,241 @@
+@import url(html4.html);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px; 
+}
+h2, p {
+    text-decoration: none; 
+}
+
+.bulb {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+
+.switch {
+    margin-top: 20px; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px; 
+}
+.tit {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px; /* Añade margen superior */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;
+    box-sizing: border-box;
+}
+.titu {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px; /* Añade margen superior */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex; /* Muestra los títulos y las tarjetas cuando el interruptor está activado */
+    flex-direction: column; /* Alinea los elementos verticalmente cuando se ocultan los títulos */
+    justify-content: center;
+    max-width: 800px;
+}
+.content h2 {
+    margin-top: 30px; /* Añade un margen superior de 20px a los títulos */
+}
+
+#check:not(:checked) + .switch + .content-container .tit {
+    display: none; /* Oculta los títulos cuando el interruptor está desactivado */
+}
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.titu h1 {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Añade espacio entre el título y el texto */
+}
+
+.titu h2 {
+    font-size: 16px; /* Tamaño de fuente para el texto */
+    text-align: justify; /* Alinea el texto justificado */
+    margin-bottom: 10px; /* Añade espacio entre los párrafos */
+}
+
+.card {
+    max-width: 340px;
+    height: 250px;
+    background-color: #fff;
+    margin: 30px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    margin-bottom: 20px;
+    align-items: center; 
+    text-align: center; 
+}
+
+.card h2 {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    align-items: center; 
+    text-align: center;
+}
+
+.content {
+    text-align: justify;
+}
+
+.card:hover {
+    height: 10 px; /* Aumenta la altura cuando se abre */
+    margin-bottom: 10px; /* Aumenta el margen inferior cuando se abre */
+}
+
+.imgBx {
+    max-width: 200px;
+    height: 130px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-bottom: 35px; 
+}
+
+
+.imgBx img {
+    max-width: 100%;
+    border: 2px solid #000; 
+    border-radius: 4px; 
+}
+
+.content {
+    margin-top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    height: 420px;
+    margin-bottom: 50px; 
+}
+
+.card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+/* Estilos para la bombilla y el interruptor */
+.bulb {
+    margin-bottom: 50px;
+    margin-top: 2200px; 
+}
+
+.bulb i {
+    color: #fff;
+    font-size: 280px;
+    transition: all 0.3s;
+}
+
+.bulb i.on {
+    color: #fddb09;
+    text-shadow: 0 0 100px #ffe500;
+}
+
+.switch > input {
+    display: none;
+}
+
+.switch > label {
+    margin: auto;
+    display: block;
+    position: relative;
+    background: #d2d9e4;
+    width: 112px;
+    height: 56px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+    cursor: pointer;
+}
+
+.switch > label:before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    left: 0;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.switch > input:checked + label {
+    background: #20a0ff;
+}
+
+.switch > input:checked + label:before {
+    left: 56px;
+}

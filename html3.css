@@ -1,0 +1,274 @@
+@import url(html3.html);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px; 
+}
+h2, p {
+    text-decoration: none; 
+}
+
+.bulb {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+
+.switch {
+    margin-top: 20px; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px; 
+}
+.tit {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #fff;
+    border: transparent;
+    border-radius: 4px;
+    margin-top: 20px; /* Añade margen superior */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centra el texto horizontalmente */
+
+    /* Añade espaciado interlineado al texto */
+    line-height: 1.5; /* Puedes ajustar el valor según tu preferencia */
+}
+.content-container {
+    display: flex; /* Muestra los títulos y las tarjetas cuando el interruptor está activado */
+    flex-direction: column; /* Alinea los elementos verticalmente cuando se ocultan los títulos */
+    justify-content: center;
+    max-width: 800px;
+}
+.content h2 {
+    margin-top: 30px; /* Añade un margen superior de 20px a los títulos */
+}
+
+#check:not(:checked) + .switch + .content-container .tit {
+    display: none; /* Oculta los títulos cuando el interruptor está desactivado */
+}
+.tit h1 {
+    font-size: 24px; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Añade espacio entre el título y el texto */
+}
+
+.tit h2 {
+    font-size: 16px; /* Tamaño de fuente para el texto */
+    text-align: justify; /* Alinea el texto justificado */
+    margin-bottom: 10px; /* Añade espacio entre los párrafos */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card {
+    max-width: 340px;
+    height: 250px;
+    background-color: #fff;
+    margin: 30px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    margin-bottom: 20px;
+    align-items: center; 
+    text-align: center; 
+    max-width: calc(33.33% - 20px); /* Cambia el ancho para que haya tres tarjetas en una fila */
+    height: 250px;
+}
+
+.card h2 {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    align-items: center; 
+    text-align: center;
+}
+
+.content {
+    text-align: justify;
+}
+
+.card:hover {
+    height: 420px;
+}
+
+.imgBx {
+    max-width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin-bottom: 35px; 
+}
+
+
+.imgBx img {
+    max-width: 100%;
+    border: 2px solid #000; 
+    border-radius: 4px; 
+}
+.content {
+    margin-top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card-group {
+    display: flex;
+    justify-content: center; /* Cambiamos de 'space-between' a 'center' para centrar los elementos */
+    margin-bottom: 20px; /* Agregamos margen entre los grupos de tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no caben en una fila */
+}
+.card-group .card {
+    flex: 1;
+    max-width: calc(33.33% - 20px); /* Cambia el ancho para que haya tres tarjetas en una fila */
+    margin: 0 10px;
+}
+.card-group .card:nth-child(4n) {
+    margin-right: 0; /* Quitamos el margen derecho para la última tarjeta de cada fila */
+}
+.card:hover {
+    height: 500px;
+}
+.card-group .card:hover {
+    height: 500px;
+}
+.card-group .card .imgBx {
+    max-width: 200px; /* Cambia el ancho máximo de la imagen */
+    height: 200px; /* Cambia la altura de la imagen */
+    top: -40px; /* Cambia la posición vertical de la imagen */
+    left: 0; /* Cambia la posición horizontal de la imagen */
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+.card-group .card .imgBx img {
+    max-width: 100%; /* Cambia el ancho máximo de la imagen dentro del cuadro */
+    border: 1px solid #000; /* Cambia el borde de la imagen */
+    border-radius: 1px; /* Cambia el radio de borde de la imagen */
+}
+.card-group .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+.card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+.card:nth-child(5n+1) {
+    clear: both; /* Cambia 4n+1 a 5n+1 para una fila de 4 */
+}
+.content {
+    visibility: hidden;
+    /* Otros estilos */
+}
+/* Estilos para la bombilla y el interruptor */
+.bulb {
+    margin-bottom: 50px;
+    margin-top: 1800px; 
+}
+
+.bulb i {
+    color: #fff;
+    font-size: 280px;
+    transition: all 0.3s;
+}
+
+.bulb i.on {
+    color: #fddb09;
+    text-shadow: 0 0 100px #ffe500;
+}
+
+.switch > input {
+    display: none;
+}
+
+.switch > label {
+    margin: auto;
+    display: block;
+    position: relative;
+    background: #d2d9e4;
+    width: 112px;
+    height: 56px;
+    border-radius: 30px;
+    border: 2px solid #cad3dc;
+    cursor: pointer;
+}
+
+.switch > label:before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    left: 0;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.switch > input:checked + label {
+    background: #20a0ff;
+}
+
+.switch > input:checked + label:before {
+    left: 56px;
+}
